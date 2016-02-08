@@ -1,2 +1,4 @@
 # freelancer-1.0.4
-freelancer one page bootstrap site
+Oh, Hello James!  Welcome mate.
+
+Professional Development Site
