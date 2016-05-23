@@ -1,7 +1,7 @@
 $(function() {
 
     $("input,textarea").jqBootstrapValidation({
-        preventSubmit: true,
+        preventSubmit: false,
         submitError: function($form, event, errors) {
             // additional error messages or events
         },
@@ -21,7 +21,7 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "././mail/contact_me.php",
+                url: "https://formspree.io/craig@craigderington.me",
                 type: "POST",
                 data: {
                     name: name,
@@ -37,7 +37,7 @@ $(function() {
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
                     $('#success > .alert-success')
-                        .append("<strong>Your message has been sent. </strong>");
+                        .append("<strong>Thank you.  Your message has been sent... </strong>");
                     $('#success > .alert-success')
                         .append('</div>');
 
