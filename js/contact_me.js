@@ -21,7 +21,7 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "https://formspree.io/craig@craigderington.me",
+                url: "https://formspree.io/f/xdkgzjka",
                 type: "POST",
                 data: {
                     name: name,
@@ -37,7 +37,7 @@ $(function() {
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
                     $('#success > .alert-success')
-                        .append("<strong>Thank you.  Your message has been sent... </strong>");
+                        .append("<strong>Thanks " + firstName + ", your message was delivered successfully...</strong>");
                     $('#success > .alert-success')
                         .append('</div>');
 
@@ -49,8 +49,10 @@ $(function() {
                     $('#success').html("<div class='alert alert-success'>");
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
-                    $('#success > .alert-success').append("<strong>Thanks " + firstName + ", your message was delivered successfully...");
-                    $('#success > .alert-success').append('</div>');
+                    $('#success > .alert-success').append("<strong>Thanks " + firstName + ", your message was delivered successfully...</strong>");
+                    $('#success > .alert-success')
+                        .append('</div>');
+
                     //clear all fields
                     $('#contactForm').trigger("reset");
                 },
